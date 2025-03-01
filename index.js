@@ -1,8 +1,8 @@
 const lynx = require('lynx');
 
-// instantiate a metrics client
-//  Note: the metric hostname is hardcoded here
-const metrics = new lynx('localhost', 8125);
+// Use environment variable for StatsD host
+const statsdHost = process.env.STATSD_HOST || 'localhost';
+const metrics = new lynx(statsdHost, 8125);
 
 // sleep for a given number of milliseconds
 function sleep(ms) {

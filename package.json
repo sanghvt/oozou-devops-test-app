@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"PASS\" && exit 0"
+    "test": "echo \"PASS\" && exit 0",
+    "dev": "node index.js",
+    "start": "node index.js",
+    "start:uat": "node index.js",
+    "build": "mkdir -p dist && cp index.js package*.json dist/"
   },
   "author": "",
   "license": "UNLICENSED",
